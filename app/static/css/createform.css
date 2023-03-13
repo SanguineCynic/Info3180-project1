@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+label{
+    font-family: Open Sans;
+    font-size: 20px;
+}
+
+form{
+    background-color: #ededed;
+    width: 60%;
+    padding-left: 24px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.inline-form *{
+    padding-right: 3px;
+    margin-top: 12px;
+}
+
+input[type="submit"]{
+    padding:12px;
+    border: 1px solid gray;
+    color: white;
+    border-radius: 5px;
+    margin-top: 12px;
+    background-color: #0d6efd;
+}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block main %}
+<link rel="stylesheet" href="/static/css/createform.css">
+<h1 class="page-header">Create a Property Listing</h1>
+<hr>
+
+{% include 'flash_messages.html' %}
+
+<form action="" method="post" enctype="multipart/form-data">
+    {{form.csrf_token}}
+
+    <label>{{form.title.label}}</label><br>
+    {{form.title(size=90)}}<br>
+
+    <label>{{form.description.label}}</label><br>
+    {{form.description(rows='10', cols='81')}}<br>
+
+    <div class="inline-form">
+        <label>{{form.num_bedrooms.label}}</label>
+        {{form.num_bedrooms}}
+    
+        <label>{{form.num_bathrooms.label}}</label>
+        {{form.num_bathrooms}}
+    </div>
+    
+
+    
+    <div class="inline-form">
+    <label>{{form.price.label}}</label>
+    {{form.price}}
+
+    <label>{{form.type.label}}</label>
+    {{form.type}}
+
+    </div>
+    
+    <label>{{form.location.label}}</label><br>
+    {{form.location(size=30)}}<br>
+    
+
+
+    <label>{{form.photo.label}}</label><br>
+    {{form.photo}}<br>
+
+    {{form.submit}}
+
+</form>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/listings.css">
+
+{% include 'flash_messages.html' %}
+
+
+<div id="listings">
+    {% for listing in properties %}
+
+    <section class="listing">
+        <img src="{{listing.image_url}}" alt="Broken">
+        <h6>{{listing.title}}</h6>
+        <div class="inline-flex">
+            <img src="{{url_for('static', filename='images/pin.png')}}" alt="">
+            <p>{{listing.location}}</p>
+        </div>
+        <p class="listprice">${{listing.price}}</p>
+        <a href="{{url_for('viewproperty', propertyid=listing.listingid)}}"><button id="viewBtn">View Property</button></a>
+    </section>
+
+{% endfor %}
+</div>
+
+{% endblock %}
+

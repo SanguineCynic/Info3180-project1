@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<link rel="stylesheet" href="/static/app.css">
+<div id="property">
+    <img src="{{listing.image_url}}" alt="Property Image" id="propimg">
+    <div id="propinfo">
+        <h2>{{listing.title}}</h2>
+
+        <div id="priceAndType" class="inline-flex">
+            <p id="viewprice">${{listing.price}}</p>
+            <p id="viewtype">{{listing.type}}</p>
+        </div>
+
+        <p id="description">{{listing.description}}</p>
+
+        <div id="bedAndBath" class="inline-flex">
+            <section class="inline-flex">
+                <img src="{{url_for('static',filename='images/bedicon.png')}}" alt="">
+                <p>{{listing.num_bedrooms}} Bedrooms</p>
+            </section>
+
+            <section class="inline-flex">
+                <img src="{{url_for('static', filename='images/bathicon.png')}}" alt="">
+                <p>{{listing.num_bathrooms}} Bathrooms</p>
+            </section>
+        </div>
+
+        <section class="inline-flex">
+            <img src="{{url_for('static',filename='images/pin.png')}}" alt="">
+            <p>{{listing.location}}</p>
+        </section>
+
+        <button id="emailBtn">Email Realtor</button>
+    </div>
+</div>
+
+{% endblock %}

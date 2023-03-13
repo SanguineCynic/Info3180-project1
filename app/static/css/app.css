@@ -1,3 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 body {
     padding-top: 5rem;
 }
+
+#listings{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.listing{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+
+}
+    .listing img{
+        width: 400px;
+        height: 200px;
+    }
+
+.inline-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: baseline;
+
+}
+    .inline-flex img{
+        width: 32px;
+        height: 32px;
+    }
+
+#property{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 30px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+#propimg{
+    width: 650px;
+    height: auto;   
+}
+
+#bedAndBath, #priceAndType{
+    gap: 60px;
+}
+    #viewprice{
+        background-color: #14b7a6;
+        border-radius: 20px;
+        padding: 8px;
+    }
+    #viewtype{
+        background-color: orange;
+        border-radius: 20px;
+        padding: 8px;
+    }
+
+#propinfo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+    #propinfo h2{
+        font-size: 24px;
+        font-family: Open Sans;
+        padding-bottom: 12px;
+    }
+    #description{
+        font-family: Open Sans;
+    }
+
+    #emailBtn{
+        align-self: flex-start;
+        background-color: #0d6efd;
+        color: white;
+        margin-bottom: 12px;
+        padding: 12px;
+        border-radius: 5px;
+        border: 1px solid gray;
+    }

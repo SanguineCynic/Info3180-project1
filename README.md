@@ -2,8 +2,8 @@
 Code for Info3180 Project 1
 Author: Jonathan Astwood
 
-Remember to always create a virtual environment and install the packages in your requirements file
-In order for the application to run, correctly, the following must be included in a .env file:
+Remember to always create a virtual environment and install the packages in your requirements file.
+In order for the application to run correctly, the following must be included in a .env file:
 
 ```bash
 FLASK_DEBUG=True
